@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <title>Document</title>
+  <style>
+       body {background-color: pink;}
+      .box {
+        cursor: pointer;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #96CEB4;
+        position: relative;
+        margin-right: 20px;
+
+        /*-webkit-animation-fill-mode: both;
+        animation-fill-mode: both;*/
+
+        -webkit-animation: move 1s cubic-bezier(.62,-0.91,.45,1.97);
+        animation: move 1s cubic-bezier(.62,-0.91,.45,1.97);
+      }
+
+      i {
+        color: #FFEEAD;
+        font-size: 48px;
+        position: absolute;
+        top: 16%;
+        left: 20%;
+      }
+
+      /*定义动画*/
+      @-webkit-keyframes move { /*兼容性写法。move是关键帧的动画名称*/
+        from { /*动画起始状态*/
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+        }
+        to { /*动画结束状态*/
+          opacity: 1;
+          -webkit-transform: translateY(0%);
+        }
+      }
+      @keyframes move {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+
+      /*动画延迟*/
+      .icon1 {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+      }
+      .icon2 {
+        -webkit-animation-delay: .1s;
+        animation-delay: .1s;
+      }
+      .icon3 {
+        -webkit-animation-delay: .2s;
+        animation-delay: .2s;
+      }
+      .icon4 {
+        -webkit-animation-delay: .3s;
+        animation-delay: .3s;
+      }
+  </style>
+</head>
+<body>
+  <div class="box icon1">
+    <i class="fa fa-home fa-4x"></i>
+  </div>
+  <div class="box  icon2">
+    <i class="fa fa-search fa-4x"></i>
+  </div>
+  <div class="box icon3">
+    <i class="fa fa-qq fa-4x"></i>
+  </div>
+  <div class="box icon4">
+    <i class="fa fa-envelope-o fa-4x"></i>
+  </div>
+</body>
+</html>
